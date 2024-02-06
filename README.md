@@ -1,6 +1,5 @@
 # Next-Movie
 
-
 Navigate to frontend directory
 
 - npm install
