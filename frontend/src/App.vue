@@ -1,10 +1,8 @@
 <template>
   <v-app>
-    <Header />
-    <Main />
-    <footer>
-      <Footer />
-    </footer>
+    <Header data-test="header-component" />
+    <Main data-test="main-component"/>
+      <Footer data-test="footer-component"/>
   </v-app>
 </template>
 

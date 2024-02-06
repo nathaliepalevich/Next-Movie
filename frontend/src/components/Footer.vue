@@ -1,5 +1,5 @@
 <template>
-  <div class="footer-container centerContent">
+  <footer class="footer-container centerContent">
     <div class="centerContent d-flex flex-column align-center">
       <img class="next-logo" src="@/assets/icons/favicon.svg" alt="logo" />
       <h2 class="mt-6">Contact us</h2>
@@ -15,7 +15,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>

@@ -1,6 +1,8 @@
 <template>
   <div class="justify-center flex-column align-center">
-    <h1 class="title text-uppercase">Explore your next Movies and tv shows</h1>
+    <h1 data-test="title" class="title text-uppercase">
+      Explore your next Movies and tv shows
+    </h1>
   </div>
 </template>
 
@@ -17,7 +19,7 @@
     font: $normal-bold 27px/25px $arial;
     text-transform: uppercase;
     padding: 34px 0;
-    width: $full-width
+    width: $full-width;
   }
 }
 </style>

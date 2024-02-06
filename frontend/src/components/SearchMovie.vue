@@ -6,7 +6,6 @@
       :items="items"
       v-model="searchBy"
       density="compact"
-
       variant="outlined"
     ></v-select>
     <v-text-field
@@ -18,7 +17,6 @@
       variant="underlined"
       :disabled="!searchBy"
       density="compact"
-
     ></v-text-field>
   </div>
 </template>
@@ -94,7 +92,7 @@ export default {
     width: 300px;
   }
   .select-input {
-  width: 200px;
-}
+    width: 200px;
+  }
 }
 </style>
