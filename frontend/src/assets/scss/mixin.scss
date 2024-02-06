@@ -1,0 +1,14 @@
+// flex-box
+@mixin centerContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Arrow icon
+@mixin arrowIcon() {
+    content: url("../assets/icons/arrow.svg");
+    position: relative;
+    top: 2px;
+  }
+

@@ -1,0 +1,39 @@
+{
+  "name": "next_movies",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "vite build",
+    "test:unit": "vue-cli-service test:unit",
+    "debug:unit": "vue-cli-service test:unit --inspect",
+    "dev": "node --no-warnings ./node_modules/.bin/vite",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mdi/font": "7.0.96",
+    "axios": "^1.6.7",
+    "roboto-fontface": "*",
+    "vue": "^3.3.0",
+    "vue-i18n": "^9.9.1",
+    "vuetify": "^3.0.0",
+    "vuex": "^4.1.0",
+    "webfontloader": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.9",
+    "@vitejs/plugin-vue": "^4.5.0",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-unit-jest": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "@vue/vue3-jest": "^27.0.0-alpha.1",
+    "axios-mock-adapter": "^1.22.0",
+    "babel-jest": "^27.5.1",
+    "jest": "^27.0.5",
+    "sass": "^1.69.0",
+    "unplugin-fonts": "^1.1.0",
+    "unplugin-vue-components": "^0.26.0",
+    "vite": "^5.0.0",
+    "vite-plugin-vuetify": "^2.0.0",
+    "vue-cli-plugin-vuetify": "~2.5.8",
+    "webpack-plugin-vuetify": "^2.0.0-alpha.0"
+  }
+}
