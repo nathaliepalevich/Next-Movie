@@ -11,7 +11,7 @@
     <v-text-field
       append-inner-icon="mdi-magnify"
       class="search-input"
-      :label="'Search by ' + searchByLabel"
+      :label="searchByLabel"
       v-model="searchStr"
       @input="filterMovies"
       variant="underlined"
