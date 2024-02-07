@@ -17,7 +17,7 @@
           <ModalButton
             class="button-modal"
             :isOpen="true"
-            :btnText="'Back to list'"
+            :btnText="close"
             @button-clicked="$emit('close-modal', 'close')"
           />
         </div>
@@ -28,6 +28,11 @@
 <script>
 
 export default {
+  data() {
+    return {
+      close: this.$t('modal.button.close')
+    };
+  },
   computed: {
     isOpen() {
       return this.isModalOpen;

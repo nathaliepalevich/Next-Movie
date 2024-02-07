@@ -1,12 +1,16 @@
 <template>
   <header class="flex">
-      <img src="@/assets/icons/Logo2.png" alt="header_logo" />
+    <img
+      data-test="img-logo"
+      src="@/assets/icons/Logo2.png"
+      alt="header_logo"
+    />
   </header>
 </template>
 
 <script>
 export default {
-  name: "Header"
+  name: "Header",
 };
 </script>
 

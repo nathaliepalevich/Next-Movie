@@ -29,11 +29,6 @@ export default {
   mounted() {
     this.fetchMovies();
   },
-  computed: {
-    userMessage() {
-      return this.errorMessage ? this.errorMessage : "No movies found";
-    },
-  },
   methods: {
     async fetchMovies() {
       try {
@@ -41,12 +36,12 @@ export default {
         this.movies = response.data;
         this.filteredMovies = [...this.movies];
       } catch (error) {
-        this.errorMessage = "Oops! Something went wrong";
+        this.errorMessage = this.$t('main.errorServer');
       }
     },
     filtered(movies) {
       this.filteredMovies = [...movies];
-      this.errorMessage = this.filteredMovies?.length ? "" : "No movies found";
+      this.errorMessage = this.filteredMovies?.length ? "" : this.$t('main.errorNoMovies');
     },
   },
 };

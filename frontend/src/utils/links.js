@@ -1,5 +1,6 @@
 
 const emailLink = {
+  mailStr: 'support@nextinsurance.com',
   href: 'mailto:support@nextinsurance.com'
 }
 const socialMediaLinks = [

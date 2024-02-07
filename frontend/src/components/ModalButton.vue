@@ -11,10 +11,11 @@
 
 <script>
 export default {
+  name: 'ModalButton',
   props: {
     btnText: {
       type: String,
-      default: "Read more",
+      default: "",
     },
     isOpen: {
       type: Boolean,

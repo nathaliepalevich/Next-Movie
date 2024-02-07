@@ -1,6 +1,6 @@
 <template>
   <div class="raiting-container">
-    <img src="../assets/icons/star.svg" alt="" />
+    <img src="../assets/icons/star.svg" alt="star_image" />
     {{ rating ? rating : "0" }} {{ isDetails ? "/10" : "" }}
   </div>
 </template>

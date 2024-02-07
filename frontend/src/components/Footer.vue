@@ -2,14 +2,14 @@
   <footer class="footer-container centerContent">
     <div class="centerContent d-flex flex-column align-center">
       <img class="next-logo" src="@/assets/icons/favicon.svg" alt="logo" />
-      <h2 class="mt-6">Contact us</h2>
+      <h2 data-test="contact-title" class="mt-6">{{ $t('footer.contact') }}</h2>
       <div class="text-center mt-3">
-        <p><a :href="email" target="_blank">support@nextmovies.com</a></p>
-        <p>Mon – Fri | 6:00am – 5:00 pm PT</p>
+        <p data-test="email"><a  :href="email" target="_blank">{{emailStr}}</a></p>
+        <p>{{ $t('footer.openingDays') }} | {{ $t('footer.openingHours') }}</p>
       </div>
       <div class="d-flex mt-8">
-        <div class="logo-container" v-for="sm in smData" :key="sm.alt">
-          <a class="" :href="sm.link" target="_blank">
+        <div data-test="social-media" class="logo-container" v-for="sm in smData" :key="sm.alt">
+          <a :href="sm.link" target="_blank">
             <img :src="sm.icon" :alt="sm.alt" />
           </a>
         </div>
@@ -25,13 +25,15 @@ export default {
   name: "Footer",
   data() {
     return {
-      smData: undefined,
-      email: undefined,
+      smData: '',
+      email: '',
+      emailStr: ''
     };
   },
   mounted() {
     this.smData = socialMediaLinks;
     this.email = emailLink.href;
+    this.emailStr = emailLink.emailStr;
   },
 };
 </script>
@@ -45,9 +47,9 @@ export default {
   color: $footer-color;
   width: $full-width;
   height: 300px;
-  font: $normal 16px/21px $georgia;
+  font: $normal 16px $georgia;
   h2 {
-    font: $normal 33px/37px $georgia;
+    font: $normal 33px $georgia;
   }
   a {
     color: inherit;

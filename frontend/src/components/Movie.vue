@@ -3,13 +3,13 @@
     <img class="movie-image" :src="movie.image" alt="movie-image" />
     <div class="movie-details">
       <span class="multiline-truncate mt-2" v-html="getFormatTitle"> </span>
-      <v-tooltip activator="parent" location="top">
+      <v-tooltip activator="parent" v-if="getFormatTitle.length > 30" location="top">
         <span v-html="getFormatTitle"></span>
       </v-tooltip>
       <Rating :rating="movie.rating" />
       <ModalButton
         :isOpen="false"
-        :btnText="'Read more'"
+        :btnText="readMore"
         @button-clicked="openDetails"
       />
     </div>
@@ -30,6 +30,7 @@ export default {
     return {
       isModalOpen: false,
       show: true,
+      readMore: this.$t('modal.button.open')
     };
   },
   props: {
@@ -43,7 +44,7 @@ export default {
       return this.movie?.rating ? this.movie.rating : 0;
     },
     getFormatTitle() {
-      return this.movie.title + " " + "(" + this.movie.released + ")";
+      return `${this.movie.title} (${this.movie.released})`;
     },
     movieDeatails() {
       return {

@@ -4,6 +4,8 @@ module.exports = {
     "^.+\\.js$": "babel-jest",
   },
   moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
     "^axios$": "axios/dist/node/axios.cjs",
   },
+
 };

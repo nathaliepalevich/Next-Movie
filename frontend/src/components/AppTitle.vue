@@ -1,7 +1,7 @@
 <template>
   <div class="justify-center flex-column align-center">
     <h1 data-test="title" class="title text-uppercase">
-      Explore your next Movies and tv shows
+      {{ $t('header.title') }}
     </h1>
   </div>
 </template>

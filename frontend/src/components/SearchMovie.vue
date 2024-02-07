@@ -1,10 +1,11 @@
 <template>
   <div class="search-container">
     <v-select
-      label="Search by.."
+      :label="$t('search.selectLabel')"
       class="select-input"
       :items="items"
       v-model="searchBy"
+      :disabled="!movies.length"
       density="compact"
       variant="outlined"
     ></v-select>
@@ -23,6 +24,7 @@
 
 <script>
 export default {
+  name: 'SearchMovie',
   props: {
     movies: {
       type: Array,
@@ -33,12 +35,12 @@ export default {
     return {
       searchStr: "",
       searchBy: "",
-      searchByLabel: "Choose category to search by..",
+      searchByLabel: "",
       items: [
-        { title: "Title", value: "title" },
-        { title: "Description", value: "synopsis" },
-        { title: "Release year", value: "released" },
-        { title: "Rating", value: "rating" },
+        { title: this.$t("search.title"), value: "title" },
+        { title: this.$t("search.description"), value: "synopsis" },
+        { title: this.$t("search.released"), value: "released" },
+        { title: this.$t("search.rating"), value: "rating" },
       ],
     };
   },
@@ -56,8 +58,7 @@ export default {
 
   methods: {
     filterMovies() {
-      let filtered;
-      filtered = this.movies.filter((movie) =>
+      let filtered = this.movies.filter((movie) =>
         movie[this.searchBy]
           .toLowerCase()
           .includes(this.searchStr.toLowerCase())

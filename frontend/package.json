@@ -3,16 +3,18 @@
   "version": "0.0.0",
   "scripts": {
     "build": "vite build",
-    "test:unit": "vue-cli-service test:unit",
-    "debug:unit": "vue-cli-service test:unit --inspect",
+    "test:unit": "vue-cli-service test:unit --watch",
     "dev": "node --no-warnings ./node_modules/.bin/vite",
     "preview": "vite preview"
   },
   "dependencies": {
     "@mdi/font": "7.0.96",
+    "@vue/test-utils": "^2.4.4",
     "axios": "^1.6.7",
     "roboto-fontface": "*",
+    "test-utils": "^1.1.1",
     "vue": "^3.3.0",
+    "vue-i18n": "^9.9.1",
     "vuetify": "^3.0.0",
     "vuex": "^4.1.0",
     "webfontloader": "^1.0.0"
